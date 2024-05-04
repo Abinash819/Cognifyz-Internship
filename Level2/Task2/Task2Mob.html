@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile friendly nav</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #8828c0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            display: block;
+            padding: 10px 35px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
+
+        #button1 {
+            visibility: hidden;
+        }
+
+        @media only screen and (max-width:430px) {
+            #button1 {
+                visibility: visible;
+                position: absolute;
+                top: 20px;
+                right: 10px;
+            }
+
+            #button1 img {
+                height: 30px;
+                width: 30px;
+            }
+
+            nav {
+                visibility: hidden;
+            }
+
+            .navbar-toggle {
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href=" ">Home</a></li>
+            <li><a href=" ">About</a></li>
+            <li><a href=" ">Contact us</a></li>
+        </ul>
+    </nav>
+    <button id="button1" type="button" class="navbar-toggle" onclick="toggleMenu()">
+        <img src="img/menu.png" alt="">
+    </button>
+</body>
+
+</html>

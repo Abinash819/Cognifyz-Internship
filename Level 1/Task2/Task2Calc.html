@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Calculator
+    </title>
+    <style>
+      
+        label{
+            margin: 10px;
+        }
+        #num1{
+            margin: 10px;
+        }
+        #num2{
+            margin: 10px;
+
+        }
+        #add{
+            margin-left: 15px;
+        }
+        #result{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Calculator</h2>
+    <label for="num1">Enter 1st number:</label>
+    <input type="number" id="num1">
+    <br>
+    <label for="num2">Enter 2nd number:</label>
+    <input type="number" id="num2">
+    <br>
+    <button onclick="calculate()" id="add">Add</button>
+    <br>
+    <p id="result"></p>
+
+</body>
+<script>
+       function calculate() {
+            // Get the values of the num1 & num2
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            // Check if both inputs are valid numbers
+            if (!isNaN(num1) && !isNaN(num2)) {
+                // Add the numbers together
+                var sum = num1 + num2;
+
+                // Display the result
+                document.getElementById("result").textContent = "Sum is: " + sum;
+            } else {
+                // Display an error message if inputs are not valid numbers
+                document.getElementById("result").textContent = "Invalid ! Please enter valid numbers.";
+            }
+        }
+</script>
+</html>

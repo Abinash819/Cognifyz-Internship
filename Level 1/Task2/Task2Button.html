@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            font-family: sans-serif;
+        }
+        button{
+            height: 300px;
+            width: 400px;
+            margin: 200px;
+        
+          cursor: pointer;
+          background: #227f26;
+          border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button class="Button">Click me</button>
+</body>
+<script>
+   let Button= document.querySelector('.Button');
+   let colors = ['violet','blue','brown','green','yellow','red','samon']; 
+   let currentColorIndex = 0; 
+   Button.addEventListener('click',function(){
+    Button.style.backgroundColor = colors[currentColorIndex];
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
+   });
+</script>
+</html>
